@@ -84,11 +84,11 @@ console.log(forecastedDay)
     forecastWeather.insertAdjacentHTML(`beforeend`, `
     <div class="text-center space-y-8">
     <div>
-      <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" class="mx-auto">
+      <img src="https:${forecastedDay.day.condition.icon}" class="mx-auto">
       <h1 class="text-2xl text-bold text-gray-500">${forecastedDay.date}</h1>
       <h2 class="text-xl">High ${forecastedDay.day.maxtemp_f}° – Low ${forecastedDay.day.mintemp_f}°</h2>
       
-      <p class="text-gray-500">${forecastedDay.condition}</h1>
+      <p class="text-gray-500">${forecastedDay.day.condition.text}</h1>
     </div>
     </div>
     `)
